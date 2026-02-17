@@ -1,0 +1,27 @@
+# --- Python Bytecode (Basura generada automáticamente) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Entornos Virtuales (¡NUNCA SUBAS ESTO!) ---
+# Es muy pesado y cada quien debe crear el suyo
+venv/
+env/
+.venv/
+.env
+
+# --- Distribución y empaquetado (Si creas un .exe después) ---
+dist/
+build/
+*.spec
+
+# --- Configuración de IDEs (Personal de tu compu) ---
+.vscode/
+.idea/
+
+# --- Archivos del Sistema Operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Logs y Errores ---
+*.log
