@@ -1,10 +1,23 @@
-from functions import Calculator
-from utils import enter_hours
+import sys
+from PyQt5.QtWidgets import QApplication
+from model import CalculatorModel
+from view import SalaryView
+from controller import SalaryController
 
-hours = enter_hours()
+def main():
+    app = QApplication(sys.argv)
 
-calc1 = Calculator(hours)
+    # Instanciamos las 3 partes del MVC
+    model = CalculatorModel()
+    view = SalaryView()
+    
+    # El controlador conecta el modelo y la vista
+    controller = SalaryController(model, view)
 
-payment = calc1.payment_total()
+    # Mostramos la ventana
+    view.show()
 
-print(f"The total salay of this month so far is: {payment:,.0f} COP".replace(",", "."))
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
